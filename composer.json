@@ -1,0 +1,25 @@
+{
+    "name": "rafaelzuim/sf4cli",
+    "description": "Just a few commands using sf4 console",
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/console": "^5.0"
+    },
+    "config": {
+        "platform": {
+            "php": "^7.2.5"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "RafaelZuim\\Sf4Cli\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafael Zuim",
+            "email": "rafael.czuim@gmail.com"
+        }
+    ]
+}
