@@ -17,6 +17,11 @@ class Reader implements ReaderInterface
     public function read(string $input): OfferCollection
     {
         // TODO: Implement read() method.
+        return $this->mockData();
+    }
+
+    private function mockData() : OfferCollection
+    {
         return new OfferCollection(
             [
                 new Offer(new \DateTime('now'), 1, 3.30, 100),

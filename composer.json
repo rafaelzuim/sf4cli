@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "RafaelZuim\\Sf4Cli\\": "src/"
+            "RafaelZuim\\Sf4Cli\\": "src/",
+            "RafaelZuim\\Sf4CliTest\\": "test/Sf4CliApp"
         }
     },
     "license": "MIT",

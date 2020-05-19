@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
+        bootstrap="./test/bootstrap.php"
+        colors="true"
+        stopOnFailure="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        verbose="true">
+
+    <php>
+        <env name="UNITTEST" value="true"/>
+    </php>
+
+    <testsuites>
+        <testsuite name="SfaCliApp">
+            <directory>test/Sf4CliApp</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="coverage-text" target="php://stdout" showOnlySummary="true"/>
+        <log type="coverage-php" target="coverage.php"/>
+        <log type="coverage-html" target="./coverage"/>
+    </logging>
+</phpunit>
