@@ -1,6 +1,6 @@
 <?php
 
-namespace RafaelZuim\Sf4Cli;
+namespace RafaelZuim\Sf4Cli\Dto;
 
 /**
  * Class Offer

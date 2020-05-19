@@ -4,7 +4,7 @@
 namespace RafaelZuim\Sf4Cli\Service;
 
 
-use RafaelZuim\Sf4Cli\OfferCollection;
+use RafaelZuim\Sf4Cli\Dto\OfferCollection;
 
 interface ReaderInterface
 {
