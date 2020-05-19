@@ -30,16 +30,25 @@ class FindByPriceRange extends AbstractCommand
         $pricesFrom = (float)$input->getArgument('pricesFrom');
         $pricesTo = (float)$input->getArgument('pricesTo');
 
-        foreach ($offers->getIterator() as $key => $offer) {
+        $output->writeln(
+            \sprintf(
+                "Searching foor offers in a price range from EUR %s to EUR %s.",
+                $pricesFrom,
+                $pricesTo
+            )
+        );
+        $resultArray = [];
+
+        foreach ($offers->getIterator() as $offer) {
             /** @var Offer $offer */
-            if ($offer->getPrice() >= $pricesFrom && $offer->getPrice() <= $pricesTo) {
-                continue;
+            if ($offer->getPrice() >= $pricesFrom && $offer->getPrice() <= $pricesTo && $offer->getQuantity() > 0) {
+                $resultArray [] = $offer;
             }
-            $offers->remove($key);
         }
 
-        // TODO
-        $output->writeln((string)$offers);
+        $offers->setDto($resultArray);
+
+        $output->writeln((string) $offers);
         return 0;
     }
 }

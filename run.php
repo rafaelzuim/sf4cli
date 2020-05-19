@@ -8,8 +8,7 @@ use Symfony\Component\Console\Application;
 
 $application = new Application();
 
-// ... register commands
-
+// todo Create a auto loader somehow to load all commands within Console\Command folder
 $application->add(new \RafaelZuim\Sf4Cli\Controller\Console\Command\FindByTimeRange());
 $application->add(new \RafaelZuim\Sf4Cli\Controller\Console\Command\FindByPriceRange());
 

@@ -24,11 +24,16 @@ class Reader implements ReaderInterface
     {
         return new OfferCollection(
             [
-                new Offer(new \DateTime('now'), 1, 3.30, 100),
-                new Offer(new \DateTime('now'), 12, 14.30, 80),
-                new Offer(new \DateTime('now'), 13, 7.30, 25),
-                new Offer(new \DateTime('now'), 14, 6.30, 23),
-                new Offer(new \DateTime('now'), 15, 3.80, 1),
+                new Offer(new \DateTime('now'), 1, 3.30, rand(1,100)),
+                new Offer(new \DateTime('2020-07-16'), 12, 14.30, rand(1,100)),
+                new Offer(new \DateTime('2020-05-30'), 13, 7.30, rand(1,100)),
+                new Offer(new \DateTime('2020-06-05'), 35, 6.30, rand(1,100)),
+                new Offer(new \DateTime('2020-06-10'), 78, 3.80, rand(1,100)),
+                new Offer(new \DateTime('2020-12-25'), 1, 3.90, rand(1,100)),
+                new Offer(new \DateTime('2020-12-25'), 45, 7.80, rand(1,100)),
+                new Offer(new \DateTime('2020-10-10'), 93, 123.40, rand(1,100)),
+                new Offer(new \DateTime('2020-09-15'), 14, 25.80, rand(1,100)),
+                new Offer(new \DateTime('2020-12-01'), 10, 36.80, rand(1,100)),
             ]
         );
     }
